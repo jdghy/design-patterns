@@ -1,13 +1,4 @@
-﻿using Singleton_NonThreadSafe;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Singleton_NonThreadSafe
+﻿namespace Singleton_NonThreadSafe
 {
     // The Singleton class defines the `GetInstance` method that serves as an
     // alternative to constructor and lets clients access the same instance of
@@ -50,4 +41,5 @@ namespace Singleton_NonThreadSafe
 
 
 }
+
 
