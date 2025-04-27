@@ -1,4 +1,4 @@
-# Note: The above code is a simple implementation of the Singleton design pattern in C#.  
+#Note: The above code is a simple implementation of the Singleton design pattern in C#.  
 
 #Applicability
 	
@@ -15,7 +15,7 @@
     Make the default constructor private, to prevent other objects from using the new operator with the Singleton class.
     Create a static creation method that acts as a constructor. Under the hood, this method calls the private constructor to create an object and saves it in a static field.All following calls to this method return the cached object.
 
-# The above implementation is not thread-safe. In a multithreaded environment, two threads can call the GetInstance method at the same time, creating two instances of the Singleton class. To make it thread-safe, you can use locking or other synchronization techniques.
+#The above implementation is not thread-safe. In a multithreaded environment, two threads can call the GetInstance method at the same time, creating two instances of the Singleton class. To make it thread-safe, you can use locking or other synchronization techniques.
 
 #How to Implement
 
