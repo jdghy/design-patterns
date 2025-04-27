@@ -1,35 +1,28 @@
-# Design-Patterns-.NET 
-**Hands on Design Patterns in C# and .NET by Jayanta Dutta**
+// Note: The above code is a simple implementation of the Singleton design pattern in C#.  
 
-It's a standardized approach to solve common software design issues.
-In software development, design patterns serve a similar purpose—they provide templated solutions to recurring problems, ensuring that you don't have to reinvent the wheel each time you encounter a familiar issue.
+//Applicability
+    //Use the Singleton pattern when a class in your program should have just a single instance available to all clients; for example, a single database object shared by different parts of the program.
 
-To select a pattern, we must first go through the problem identification. If the problem is related to:
+    //The Singleton pattern disables all other means of creating objects of a class except for the special creation method.This method either creates a new object or returns an existing one if it has already been created.
 
-Object Creation? → Creational Patterns
+    //Use the Singleton pattern when you need stricter control over global variables.
 
-Object Assembly? → Structural Patterns
+    //Unlike global variables, the Singleton pattern guarantees that there’s just one instance of a class. Nothing, except for the Singleton class itself, can replace the cached instance.
 
-Object Interactions? → Behavioral Patterns
+//All implementations of the Singleton have these two steps in common:
 
-Most commonly used patterns:
+    //Make the default constructor private, to prevent other objects from using the new operator with the Singleton class.
+    //Create a static creation method that acts as a constructor. Under the hood, this method calls the private constructor to create an object and saves it in a static field.All following calls to this method return the cached object.
 
-![image](https://github.com/user-attachments/assets/5d917b2e-1643-4a67-8437-3ef8a19c50c4)
+// The above implementation is not thread-safe. In a multithreaded environment, two threads can call the GetInstance method at the same time, creating two instances of the Singleton class. To make it thread-safe, you can use locking or other synchronization techniques.
 
-Creational Design Pattern -> Creational patterns focus on instantiating an object or group of related objects.
+//How to Implement
+    //Add a private static field to the class for storing the singleton instance.
 
-Structural Patterns -> Structural patterns are primarily concerned with object composition or, in other words, how the entities can use each other.
+    //Declare a public static creation method for getting the singleton instance.
 
-Behavioral patterns -> They focus on distributing responsibility among the objects. They differ from structural patterns in that they define the patterns for message conveyance and communication between them in addition to the structure.
+    //Implement “lazy initialization” inside the static method.It should create a new object on its first call and put it into the static field.The method should always return that instance on all subsequent calls.
 
+    //Make the constructor of the class private. The static method of the class will still be able to call the constructor, but not the other objects.
 
-
-
-
-
-
-
-
-
-
-
+    //Go over the client code and replace all direct calls to the singleton’s constructor with calls to its static creation method.
