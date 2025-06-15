@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            IPayment paymentMethod = PaymentFactory.CreatePayment(PaymentMethod.CreditCard);
+            paymentMethod.ProcessPayment(100.00);   
         }
     }
 }
