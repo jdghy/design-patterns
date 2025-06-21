@@ -1,4 +1,4 @@
-# Design-Patterns-.NET 
+# Design-Patterns- C# and .NET
 **Hands on Design Patterns in C# and .NET by Jayanta Dutta**
 
 It's a standardized approach to solve common software design issues.
