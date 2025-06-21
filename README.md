@@ -1,4 +1,4 @@
-# Design-Patterns-.NET 
+# Abstract Factory
 **Hands on Design Patterns in C# and .NET by Jayanta Dutta**
 
 It's a standardized approach to solve common software design issues.
