@@ -28,3 +28,17 @@
     Make the constructor of the class private. The static method of the class will still be able to call the constructor, but not the other objects.
 
     Go over the client code and replace all direct calls to the singleton’s constructor with calls to its static creation method.
+
+#Common Use Cases:
+
+    The singleton design pattern ensures a class has only one instance and provides a global point of access to it.
+    1.Logging System
+    2.Database Connection
+    3.Config Manager
+    4.Cache Manager
+    
+    There are four well known ways that we can implement singleton pattern in c#
+    1.Classic Singleton(also known as lazy initialization singleton)
+    2.Thread Safe Singleton(also known as double check locking singleton)
+    3.Lazy Generic Singleton
+    4.Static Initialization Singleton
