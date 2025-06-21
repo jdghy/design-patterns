@@ -38,7 +38,7 @@
     4.Cache Manager
     
     There are four well known ways that we can implement singleton pattern in c#
-    1.Classic Singleton(also known as lazy initialization singleton)
+    1.Classic Singleton(also known as lazy initialization singleton)-Not Thread Safe
     2.Thread Safe Singleton(also known as double check locking singleton)
     3.Lazy Generic Singleton
     4.Static Initialization Singleton
