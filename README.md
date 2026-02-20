@@ -1,35 +1,19 @@
-# Design-Patterns- C# and .NET
-**Hands on Design Patterns in C# and .NET by Jayanta Dutta**
+# Strategy Design Pattern
 
-It's a standardized approach to solve common software design issues.
-In software development, design patterns serve a similar purpose—they provide templated solutions to recurring problems, ensuring that you don't have to reinvent the wheel each time you encounter a familiar issue.
+The Strategy Design Pattern is a behavioral pattern that defines a family of interchangeable algorithms and encapsulates each one in its own class. This allows you to switch between different behaviors at runtime without modifying the code that uses them.
 
-To select a pattern, we must first go through the problem identification. If the problem is related to:
+Key Components
 
-Object Creation? → Creational Patterns
+Strategy Interface: Defines the signature common to all supported algorithms.
 
-Object Assembly? → Structural Patterns
+Concrete Strategies: Implement the actual algorithms using the strategy interface.
 
-Object Interactions? → Behavioral Patterns
+Context: Maintains a reference to a strategy object and delegates the task to it.
 
-Most commonly used patterns:
+Strategy vs. State Pattern
 
-![image](https://github.com/user-attachments/assets/5d917b2e-1643-4a67-8437-3ef8a19c50c4)
+While they look structurally similar, their intent differs:
 
-Creational Design Pattern -> Creational patterns focus on instantiating an object or group of related objects.
+Strategy is about choosing how to perform a specific task (e.g., sorting algorithms or payment methods). The client usually picks the strategy.
 
-Structural Patterns -> Structural patterns are primarily concerned with object composition or, in other words, how the entities can use each other.
-
-Behavioral patterns -> They focus on distributing responsibility among the objects. They differ from structural patterns in that they define the patterns for message conveyance and communication between them in addition to the structure.
-
-
-
-
-
-
-
-
-
-
-
-
+State is about an object's behavior changing automatically based on its internal state. Transitions are often handled internally by the state objects themselves.
