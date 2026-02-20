@@ -1,26 +1,20 @@
-# Design-Patterns- C# and .NET
-**Hands on Design Patterns in C# and .NET by Jayanta Dutta**
+# Visitor Design Pattern
 
-It's a standardized approach to solve common software design issues.
-In software development, design patterns serve a similar purpose—they provide templated solutions to recurring problems, ensuring that you don't have to reinvent the wheel each time you encounter a familiar issue.
 
-To select a pattern, we must first go through the problem identification. If the problem is related to:
+The Visitor Design Pattern is a behavioral pattern that lets you separate algorithms or new operations from the object structures on which they operate. It is unique because it allows you to add new functions to a class hierarchy without modifying the existing classes.
 
-Object Creation? → Creational Patterns
+Core Concept: Double Dispatch
 
-Object Assembly? → Structural Patterns
+C# normally uses Single Dispatch, where the method called depends only on the runtime type of the object. The Visitor pattern enables Double Dispatch, ensuring the correct method is executed based on the runtime types of both the visitor and the element it is visiting.
 
-Object Interactions? → Behavioral Patterns
+When to Use
 
-Most commonly used patterns:
+Complex Object Structures: When you need to perform an operation over an entire tree of objects (like a compiler's Abstract Syntax Tree).
 
-![image](https://github.com/user-attachments/assets/5d917b2e-1643-4a67-8437-3ef8a19c50c4)
+Stable Hierarchy: When the element classes (Residential, Commercial) rarely change, but you frequently add new operations (Reports, Audits, Analytics).
 
-Creational Design Pattern -> Creational patterns focus on instantiating an object or group of related objects.
+Separation of Concerns: To keep business logic out of your data-focused classes.
 
-Structural Patterns -> Structural patterns are primarily concerned with object composition or, in other words, how the entities can use each other.
-
-Behavioral patterns -> They focus on distributing responsibility among the objects. They differ from structural patterns in that they define the patterns for message conveyance and communication between them in addition to the structure.
 
 
 
