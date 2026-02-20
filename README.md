@@ -1,35 +1,27 @@
-# Design-Patterns- C# and .NET
-**Hands on Design Patterns in C# and .NET by Jayanta Dutta**
+# State Design Pattern
 
-It's a standardized approach to solve common software design issues.
-In software development, design patterns serve a similar purpose—they provide templated solutions to recurring problems, ensuring that you don't have to reinvent the wheel each time you encounter a familiar issue.
+The State Design Pattern is a behavioral pattern that allows an object to alter its behavior when its internal state changes. To a client, it appears as if the object has changed its class entirely.
 
-To select a pattern, we must first go through the problem identification. If the problem is related to:
+Key Components:
 
-Object Creation? → Creational Patterns
+Context: The main object that maintains a reference to the current state.
 
-Object Assembly? → Structural Patterns
+State Interface: Defines a common interface for all concrete states.
 
-Object Interactions? → Behavioral Patterns
+Concrete States: Individual classes that implement state-specific logic and handle transitions.
 
-Most commonly used patterns:
+When to Use
 
-![image](https://github.com/user-attachments/assets/5d917b2e-1643-4a67-8437-3ef8a19c50c4)
+Avoid Complex Conditionals: When your object has many if-else or switch blocks that depend on its current state.
 
-Creational Design Pattern -> Creational patterns focus on instantiating an object or group of related objects.
+Dynamic Behavior: When an object must change how it responds to the same method call based on its history.
 
-Structural Patterns -> Structural patterns are primarily concerned with object composition or, in other words, how the entities can use each other.
+Finite State Machines: Ideal for modeling workflows like ATMs, vending machines, or document approval cycles.
 
-Behavioral patterns -> They focus on distributing responsibility among the objects. They differ from structural patterns in that they define the patterns for message conveyance and communication between them in addition to the structure.
+Key Benefits
 
+Single Responsibility: Logic for each state is isolated in its own class.
 
+Open/Closed Principle: You can add new states without modifying existing state classes or the context.
 
-
-
-
-
-
-
-
-
-
+Eliminates "State Bloat": Prevents the main context class from becoming a massive, unmaintainable file
